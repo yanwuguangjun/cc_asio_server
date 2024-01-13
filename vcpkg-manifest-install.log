@@ -1,0 +1,33 @@
+正在检测三元组 x64-windows 的编译器哈希...
+正在检测三元组 x86-windows 的编译器哈希...
+当前已安装所有请求的包。
+总安装时间: 300 ns
+asio 提供 CMake 目标:
+
+    # 这是启发式生成的，并且可能不正确
+    find_package(asio CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE asio::asio)
+
+The package drogon provides CMake targets:
+
+    find_package(Drogon CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE Drogon::Drogon)
+
+The package fmt provides CMake targets:
+
+    find_package(fmt CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE fmt::fmt)
+
+    # Or use the header-only version
+    find_package(fmt CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE fmt::fmt-header-only)
+
+The package gtest is compatible with built-in CMake targets:
+
+    enable_testing()
+    
+    find_package(GTest CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
+    
+    add_test(AllTestsInMain main)
+

@@ -1,0 +1,8 @@
+/.vs
+/.vscode
+/babel.config.js
+/build
+/node_modules
+/package.json
+/vcpkg_installed
+/yarn.lock
